@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Loc_Address">
+          <DataField>Loc_Address</DataField>
+        </Field>
+        <Field Name="No_SalesInvoiceHeader2">
+          <DataField>No_SalesInvoiceHeader2</DataField>
+        </Field>
+        <Field Name="Loc_Address2">
+          <DataField>Loc_Address2</DataField>
+        </Field>
+        <Field Name="Loc_city">
+          <DataField>Loc_city</DataField>
+        </Field>
+        <Field Name="Loc_postcode">
+          <DataField>Loc_postcode</DataField>
+        </Field>
+        <Field Name="Loc_phoneNo">
+          <DataField>Loc_phoneNo</DataField>
+        </Field>
+        <Field Name="Loc_Email">
+          <DataField>Loc_Email</DataField>
+        </Field>
+        <Field Name="State_Description">
+          <DataField>State_Description</DataField>
+        </Field>
+        <Field Name="recLocTinNo">
+          <DataField>recLocTinNo</DataField>
+        </Field>
+        <Field Name="Company_homepage_regisNo_PANNO">
+          <DataField>Company_homepage_regisNo_PANNO</DataField>
+        </Field>
+        <Field Name="Company_registrationNo">
+          <DataField>Company_registrationNo</DataField>
+        </Field>
+        <Field Name="Company_PANNo">
+          <DataField>Company_PANNo</DataField>
+        </Field>
+        <Field Name="EccDescription">
+          <DataField>EccDescription</DataField>
+        </Field>
+        <Field Name="EccNo_CERange_EccNoCommsion_EccNoDivision">
+          <DataField>EccNo_CERange_EccNoCommsion_EccNoDivision</DataField>
+        </Field>
+        <Field Name="EccNo_CommisionRate">
+          <DataField>EccNo_CommisionRate</DataField>
+        </Field>
+        <Field Name="EccNo_Division">
+          <DataField>EccNo_Division</DataField>
+        </Field>
+        <Field Name="EccNo_Address1">
+          <DataField>EccNo_Address1</DataField>
+        </Field>
+        <Field Name="EccNo_Address2">
+          <DataField>EccNo_Address2</DataField>
+        </Field>
+        <Field Name="EccNoCity_PostCode">
+          <DataField>EccNoCity_PostCode</DataField>
+        </Field>
+        <Field Name="PaymentMethod_Description">
+          <DataField>PaymentMethod_Description</DataField>
+        </Field>
+        <Field Name="VehOwnersName">
+          <DataField>VehOwnersName</DataField>
+        </Field>
+        <Field Name="recState_desc">
+          <DataField>recState_desc</DataField>
+        </Field>
+        <Field Name="recCountry_Name">
+          <DataField>recCountry_Name</DataField>
+        </Field>
+        <Field Name="SuppliersCode">
+          <DataField>SuppliersCode</DataField>
+        </Field>
+        <Field Name="recCustomer_EccNo">
+          <DataField>recCustomer_EccNo</DataField>
+        </Field>
+        <Field Name="recCustomer_CSTNo">
+          <DataField>recCustomer_CSTNo</DataField>
+        </Field>
+        <Field Name="recCustomer_TINNo">
+          <DataField>recCustomer_TINNo</DataField>
+        </Field>
+        <Field Name="Ship2Name">
+          <DataField>Ship2Name</DataField>
+        </Field>
+        <Field Name="SH_InvoiceNo">
+          <DataField>SH_InvoiceNo</DataField>
+        </Field>
+        <Field Name="SH_Posting_Date">
+          <DataField>SH_Posting_Date</DataField>
+        </Field>
+        <Field Name="SH_ExternalDocmentNo">
+          <DataField>SH_ExternalDocmentNo</DataField>
+        </Field>
+        <Field Name="SH_Order_Date">
+          <DataField>SH_Order_Date</DataField>
+        </Field>
+        <Field Name="SH_VechiNo">
+          <DataField>SH_VechiNo</DataField>
+        </Field>
+        <Field Name="SH_LRNo">
+          <DataField>SH_LRNo</DataField>
+        </Field>
+        <Field Name="SH_LrDate">
+          <DataField>SH_LrDate</DataField>
+        </Field>
+        <Field Name="SH_FrightType">
+          <DataField>SH_FrightType</DataField>
+        </Field>
+        <Field Name="SH_InvoicePrintTime">
+          <DataField>SH_InvoicePrintTime</DataField>
+        </Field>
+        <Field Name="SH_fullName">
+          <DataField>SH_fullName</DataField>
+        </Field>
+        <Field Name="SH_BillToAddress">
+          <DataField>SH_BillToAddress</DataField>
+        </Field>
+        <Field Name="SH_BillToAddress2">
+          <DataField>SH_BillToAddress2</DataField>
+        </Field>
+        <Field Name="SH_BillToCity">
+          <DataField>SH_BillToCity</DataField>
+        </Field>
+        <Field Name="SH_ShipToAddress">
+          <DataField>SH_ShipToAddress</DataField>
+        </Field>
+        <Field Name="SH_ShipToAddress2">
+          <DataField>SH_ShipToAddress2</DataField>
+        </Field>
+        <Field Name="SH_ShipToCity_ShipToPostcode">
+          <DataField>SH_ShipToCity_ShipToPostcode</DataField>
+        </Field>
+        <Field Name="SH_CurrancyFactor">
+          <DataField>SH_CurrancyFactor</DataField>
+        </Field>
+        <Field Name="SH_CurrancyFactorFormat">
+          <DataField>SH_CurrancyFactorFormat</DataField>
+        </Field>
+        <Field Name="ShipToCST">
+          <DataField>ShipToCST</DataField>
+        </Field>
+        <Field Name="ShiptoTIN">
+          <DataField>ShiptoTIN</DataField>
+        </Field>
+        <Field Name="ShiptoLST">
+          <DataField>ShiptoLST</DataField>
+        </Field>
+        <Field Name="EccNo">
+          <DataField>EccNo</DataField>
+        </Field>
+        <Field Name="reccountry1_Name">
+          <DataField>reccountry1_Name</DataField>
+        </Field>
+        <Field Name="Reamark1">
+          <DataField>Reamark1</DataField>
+        </Field>
+        <Field Name="Remark2">
+          <DataField>Remark2</DataField>
+        </Field>
+        <Field Name="State1">
+          <DataField>State1</DataField>
+        </Field>
+        <Field Name="InsuCompanyInf">
+          <DataField>InsuCompanyInf</DataField>
+        </Field>
+        <Field Name="a">
+          <DataField>a</DataField>
+        </Field>
+        <Field Name="Freight">
+          <DataField>Freight</DataField>
+        </Field>
+        <Field Name="FreightFormat">
+          <DataField>FreightFormat</DataField>
+        </Field>
+        <Field Name="InvType">
+          <DataField>InvType</DataField>
+        </Field>
+        <Field Name="InvType1">
+          <DataField>InvType1</DataField>
+        </Field>
+        <Field Name="number">
+          <DataField>number</DataField>
+        </Field>
+        <Field Name="outPutNo">
+          <DataField>outPutNo</DataField>
+        </Field>
+        <Field Name="SL_ChapterNo">
+          <DataField>SL_ChapterNo</DataField>
+        </Field>
+        <Field Name="DocumentNo_SalesInvoiceLine">
+          <DataField>DocumentNo_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="SL_QtyBAse">
+          <DataField>SL_QtyBAse</DataField>
+        </Field>
+        <Field Name="SL_QtyBAseFormat">
+          <DataField>SL_QtyBAseFormat</DataField>
+        </Field>
+        <Field Name="SL_BedAmt">
+          <DataField>SL_BedAmt</DataField>
+        </Field>
+        <Field Name="SL_eCessAmount">
+          <DataField>SL_eCessAmount</DataField>
+        </Field>
+        <Field Name="SL_SHECESSAmt">
+          <DataField>SL_SHECESSAmt</DataField>
+        </Field>
+        <Field Name="SL_SheCessEcess">
+          <DataField>SL_SheCessEcess</DataField>
+        </Field>
+        <Field Name="SL_UOM">
+          <DataField>SL_UOM</DataField>
+        </Field>
+        <Field Name="SL_UOMFormat">
+          <DataField>SL_UOMFormat</DataField>
+        </Field>
+        <Field Name="BatchNo">
+          <DataField>BatchNo</DataField>
+        </Field>
+        <Field Name="PackDescription">
+          <DataField>PackDescription</DataField>
+        </Field>
+        <Field Name="BEDpercent">
+          <DataField>BEDpercent</DataField>
+        </Field>
+        <Field Name="BEDpercentFormat">
+          <DataField>BEDpercentFormat</DataField>
+        </Field>
+        <Field Name="DutyAmtperunit">
+          <DataField>DutyAmtperunit</DataField>
+        </Field>
+        <Field Name="DutyAmtperunitFormat">
+          <DataField>DutyAmtperunitFormat</DataField>
+        </Field>
+        <Field Name="ecesspercent">
+          <DataField>ecesspercent</DataField>
+        </Field>
+        <Field Name="ecesspercentFormat">
+          <DataField>ecesspercentFormat</DataField>
+        </Field>
+        <Field Name="SHEpercent">
+          <DataField>SHEpercent</DataField>
+        </Field>
+        <Field Name="SHEpercentFormat">
+          <DataField>SHEpercentFormat</DataField>
+        </Field>
+        <Field Name="SL_TaxAmount">
+          <DataField>SL_TaxAmount</DataField>
+        </Field>
+        <Field Name="RoundOffAmnt">
+          <DataField>RoundOffAmnt</DataField>
+        </Field>
+        <Field Name="RoundOffAmntFormat">
+          <DataField>RoundOffAmntFormat</DataField>
+        </Field>
+        <Field Name="InvoiceGrandTotal">
+          <DataField>InvoiceGrandTotal</DataField>
+        </Field>
+        <Field Name="InvoiceGrandTotalFormat">
+          <DataField>InvoiceGrandTotalFormat</DataField>
+        </Field>
+        <Field Name="AddlDutyAmount">
+          <DataField>AddlDutyAmount</DataField>
+        </Field>
+        <Field Name="AddlDutyAmountFormat">
+          <DataField>AddlDutyAmountFormat</DataField>
+        </Field>
+        <Field Name="DiscountCharge">
+          <DataField>DiscountCharge</DataField>
+        </Field>
+        <Field Name="DiscountChargeFormat">
+          <DataField>DiscountChargeFormat</DataField>
+        </Field>
+        <Field Name="DimensionName">
+          <DataField>DimensionName</DataField>
+        </Field>
+        <Field Name="BasicRate2">
+          <DataField>BasicRate2</DataField>
+        </Field>
+        <Field Name="BasicRate2Format">
+          <DataField>BasicRate2Format</DataField>
+        </Field>
+        <Field Name="AmoutTOWords">
+          <DataField>AmoutTOWords</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesInvoiceLine">
+          <DataField>LineAmount_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesInvoiceLineFormat">
+          <DataField>LineAmount_SalesInvoiceLineFormat</DataField>
+        </Field>
+        <Field Name="BasicRate">
+          <DataField>BasicRate</DataField>
+        </Field>
+        <Field Name="BasicRateFormat">
+          <DataField>BasicRateFormat</DataField>
+        </Field>
+        <Field Name="DescriptionLineDuty">
+          <DataField>DescriptionLineDuty</DataField>
+        </Field>
+        <Field Name="DescriptionLineeCess">
+          <DataField>DescriptionLineeCess</DataField>
+        </Field>
+        <Field Name="DescriptionLineSHeCess">
+          <DataField>DescriptionLineSHeCess</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

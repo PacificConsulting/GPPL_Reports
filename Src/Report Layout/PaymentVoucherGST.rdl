@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Quantity_GLEntry">
+          <DataField>Quantity_GLEntry</DataField>
+        </Field>
+        <Field Name="Quantity_GLEntryFormat">
+          <DataField>Quantity_GLEntryFormat</DataField>
+        </Field>
+        <Field Name="BalAccountNo_GLEntry">
+          <DataField>BalAccountNo_GLEntry</DataField>
+        </Field>
+        <Field Name="Amount_GLEntry">
+          <DataField>Amount_GLEntry</DataField>
+        </Field>
+        <Field Name="Amount_GLEntryFormat">
+          <DataField>Amount_GLEntryFormat</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_GLEntry">
+          <DataField>GlobalDimension1Code_GLEntry</DataField>
+        </Field>
+        <Field Name="GlobalDimension2Code_GLEntry">
+          <DataField>GlobalDimension2Code_GLEntry</DataField>
+        </Field>
+        <Field Name="UserID_GLEntry">
+          <DataField>UserID_GLEntry</DataField>
+        </Field>
+        <Field Name="EntryNo_GLEntry">
+          <DataField>EntryNo_GLEntry</DataField>
+        </Field>
+        <Field Name="GLAccountNo_GLEntry">
+          <DataField>GLAccountNo_GLEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_GLEntry">
+          <DataField>PostingDate_GLEntry</DataField>
+        </Field>
+        <Field Name="DocumentType_GLEntry">
+          <DataField>DocumentType_GLEntry</DataField>
+        </Field>
+        <Field Name="DocumentNo_GLEntry">
+          <DataField>DocumentNo_GLEntry</DataField>
+        </Field>
+        <Field Name="Description_GLEntry">
+          <DataField>Description_GLEntry</DataField>
+        </Field>
+        <Field Name="Description26">
+          <DataField>Description26</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="CompPicture">
+          <DataField>CompPicture</DataField>
+        </Field>
+        <Field Name="CompNamePicture">
+          <DataField>CompNamePicture</DataField>
+        </Field>
+        <Field Name="CompShadedBoxPicture">
+          <DataField>CompShadedBoxPicture</DataField>
+        </Field>
+        <Field Name="CompGSTNo">
+          <DataField>CompGSTNo</DataField>
+        </Field>
+        <Field Name="nnn">
+          <DataField>nnn</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="VenAdd1">
+          <DataField>VenAdd1</DataField>
+        </Field>
+        <Field Name="VenAdd2">
+          <DataField>VenAdd2</DataField>
+        </Field>
+        <Field Name="VenAdd3">
+          <DataField>VenAdd3</DataField>
+        </Field>
+        <Field Name="VenGSTNo">
+          <DataField>VenGSTNo</DataField>
+        </Field>
+        <Field Name="VenState">
+          <DataField>VenState</DataField>
+        </Field>
+        <Field Name="VenStateCode">
+          <DataField>VenStateCode</DataField>
+        </Field>
+        <Field Name="Amtinwords">
+          <DataField>Amtinwords</DataField>
+        </Field>
+        <Field Name="VenCity">
+          <DataField>VenCity</DataField>
+        </Field>
+        <Field Name="vCGST">
+          <DataField>vCGST</DataField>
+        </Field>
+        <Field Name="vCGSTFormat">
+          <DataField>vCGSTFormat</DataField>
+        </Field>
+        <Field Name="vCGSTRate">
+          <DataField>vCGSTRate</DataField>
+        </Field>
+        <Field Name="vCGSTRateFormat">
+          <DataField>vCGSTRateFormat</DataField>
+        </Field>
+        <Field Name="vSGST">
+          <DataField>vSGST</DataField>
+        </Field>
+        <Field Name="vSGSTFormat">
+          <DataField>vSGSTFormat</DataField>
+        </Field>
+        <Field Name="vSGSTRate">
+          <DataField>vSGSTRate</DataField>
+        </Field>
+        <Field Name="vSGSTRateFormat">
+          <DataField>vSGSTRateFormat</DataField>
+        </Field>
+        <Field Name="vIGST">
+          <DataField>vIGST</DataField>
+        </Field>
+        <Field Name="vIGSTFormat">
+          <DataField>vIGSTFormat</DataField>
+        </Field>
+        <Field Name="vIGSTRate">
+          <DataField>vIGSTRate</DataField>
+        </Field>
+        <Field Name="vIGSTRateFormat">
+          <DataField>vIGSTRateFormat</DataField>
+        </Field>
+        <Field Name="HSNCode15">
+          <DataField>HSNCode15</DataField>
+        </Field>
+        <Field Name="CGST15">
+          <DataField>CGST15</DataField>
+        </Field>
+        <Field Name="SGST15">
+          <DataField>SGST15</DataField>
+        </Field>
+        <Field Name="IGST15">
+          <DataField>IGST15</DataField>
+        </Field>
+        <Field Name="VenGSTRegNo">
+          <DataField>VenGSTRegNo</DataField>
+        </Field>
+        <Field Name="UserName">
+          <DataField>UserName</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

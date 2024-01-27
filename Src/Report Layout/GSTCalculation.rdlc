@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_TransferHeader">
+          <DataField>No_TransferHeader</DataField>
+        </Field>
+        <Field Name="TransferfromCode_TransferHeader">
+          <DataField>TransferfromCode_TransferHeader</DataField>
+        </Field>
+        <Field Name="TransferfromName_TransferHeader">
+          <DataField>TransferfromName_TransferHeader</DataField>
+        </Field>
+        <Field Name="TransfertoCode_TransferHeader">
+          <DataField>TransfertoCode_TransferHeader</DataField>
+        </Field>
+        <Field Name="TransfertoName_TransferHeader">
+          <DataField>TransfertoName_TransferHeader</DataField>
+        </Field>
+        <Field Name="TransferPriceBase">
+          <DataField>TransferPriceBase</DataField>
+        </Field>
+        <Field Name="TransferPriceBaseFormat">
+          <DataField>TransferPriceBaseFormat</DataField>
+        </Field>
+        <Field Name="Qty">
+          <DataField>Qty</DataField>
+        </Field>
+        <Field Name="QtyFormat">
+          <DataField>QtyFormat</DataField>
+        </Field>
+        <Field Name="QuantityBase">
+          <DataField>QuantityBase</DataField>
+        </Field>
+        <Field Name="QuantityBaseFormat">
+          <DataField>QuantityBaseFormat</DataField>
+        </Field>
+        <Field Name="LineNo">
+          <DataField>LineNo</DataField>
+        </Field>
+        <Field Name="ItemNo_TransferLine">
+          <DataField>ItemNo_TransferLine</DataField>
+        </Field>
+        <Field Name="Description_TransferLine">
+          <DataField>Description_TransferLine</DataField>
+        </Field>
+        <Field Name="MRPrate">
+          <DataField>MRPrate</DataField>
+        </Field>
+        <Field Name="MRPrateFormat">
+          <DataField>MRPrateFormat</DataField>
+        </Field>
+        <Field Name="AssessableValu">
+          <DataField>AssessableValu</DataField>
+        </Field>
+        <Field Name="Transfer_Amount">
+          <DataField>Transfer_Amount</DataField>
+        </Field>
+        <Field Name="Transfer_AmountFormat">
+          <DataField>Transfer_AmountFormat</DataField>
+        </Field>
+        <Field Name="BEDAmount_TransferLine">
+          <DataField>BEDAmount_TransferLine</DataField>
+        </Field>
+        <Field Name="eCessAmount_TransferLine">
+          <DataField>eCessAmount_TransferLine</DataField>
+        </Field>
+        <Field Name="SHECessAmount_TransferLine">
+          <DataField>SHECessAmount_TransferLine</DataField>
+        </Field>
+        <Field Name="ExciseAmt_Transfer">
+          <DataField>ExciseAmt_Transfer</DataField>
+        </Field>
+        <Field Name="ADEAmount_TransferLine">
+          <DataField>ADEAmount_TransferLine</DataField>
+        </Field>
+        <Field Name="GrossAmt_TransferLine">
+          <DataField>GrossAmt_TransferLine</DataField>
+        </Field>
+        <Field Name="GrossAmt_TransferLineFormat">
+          <DataField>GrossAmt_TransferLineFormat</DataField>
+        </Field>
+        <Field Name="GSTBaseAmount">
+          <DataField>GSTBaseAmount</DataField>
+        </Field>
+        <Field Name="GSTPer">
+          <DataField>GSTPer</DataField>
+        </Field>
+        <Field Name="GSTPerFormat">
+          <DataField>GSTPerFormat</DataField>
+        </Field>
+        <Field Name="TotalGSTAmount">
+          <DataField>TotalGSTAmount</DataField>
+        </Field>
+        <Field Name="GSTGroupCode_TransferLine">
+          <DataField>GSTGroupCode_TransferLine</DataField>
+        </Field>
+        <Field Name="TransferPrice">
+          <DataField>TransferPrice</DataField>
+        </Field>
+        <Field Name="TransferPriceFormat">
+          <DataField>TransferPriceFormat</DataField>
+        </Field>
+        <Field Name="HSNSACCode_TransferLine">
+          <DataField>HSNSACCode_TransferLine</DataField>
+        </Field>
+        <Field Name="CGST07">
+          <DataField>CGST07</DataField>
+        </Field>
+        <Field Name="CGST07Format">
+          <DataField>CGST07Format</DataField>
+        </Field>
+        <Field Name="CGST07Per">
+          <DataField>CGST07Per</DataField>
+        </Field>
+        <Field Name="CGST07PerFormat">
+          <DataField>CGST07PerFormat</DataField>
+        </Field>
+        <Field Name="SGST07">
+          <DataField>SGST07</DataField>
+        </Field>
+        <Field Name="SGST07Format">
+          <DataField>SGST07Format</DataField>
+        </Field>
+        <Field Name="SGST07Per">
+          <DataField>SGST07Per</DataField>
+        </Field>
+        <Field Name="SGST07PerFormat">
+          <DataField>SGST07PerFormat</DataField>
+        </Field>
+        <Field Name="IGST07">
+          <DataField>IGST07</DataField>
+        </Field>
+        <Field Name="IGST07Format">
+          <DataField>IGST07Format</DataField>
+        </Field>
+        <Field Name="IGST07Per">
+          <DataField>IGST07Per</DataField>
+        </Field>
+        <Field Name="IGST07PerFormat">
+          <DataField>IGST07PerFormat</DataField>
+        </Field>
+        <Field Name="CustomDuty27">
+          <DataField>CustomDuty27</DataField>
+        </Field>
+        <Field Name="CustomDuty27Format">
+          <DataField>CustomDuty27Format</DataField>
+        </Field>
+        <Field Name="CustomCess27">
+          <DataField>CustomCess27</DataField>
+        </Field>
+        <Field Name="CustomCess27Format">
+          <DataField>CustomCess27Format</DataField>
+        </Field>
+        <Field Name="CompensationCess">
+          <DataField>CompensationCess</DataField>
+        </Field>
+        <Field Name="CompensationCessFormat">
+          <DataField>CompensationCessFormat</DataField>
+        </Field>
+        <Field Name="ItemNo_ItemLedgerEntry">
+          <DataField>ItemNo_ItemLedgerEntry</DataField>
+        </Field>
+        <Field Name="MRPrateILE">
+          <DataField>MRPrateILE</DataField>
+        </Field>
+        <Field Name="MRPrateILEFormat">
+          <DataField>MRPrateILEFormat</DataField>
+        </Field>
+        <Field Name="AssessableValue_ILE">
+          <DataField>AssessableValue_ILE</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="SIH_No">
+          <DataField>SIH_No</DataField>
+        </Field>
+        <Field Name="SIH_PostingDate">
+          <DataField>SIH_PostingDate</DataField>
+        </Field>
+        <Field Name="SIH_ExDocNo">
+          <DataField>SIH_ExDocNo</DataField>
+        </Field>
+        <Field Name="SIH_OrderDate">
+          <DataField>SIH_OrderDate</DataField>
+        </Field>
+        <Field Name="SIH_RoadPermitNo">
+          <DataField>SIH_RoadPermitNo</DataField>
+        </Field>
+        <Field Name="SIH_LRNo">
+          <DataField>SIH_LRNo</DataField>
+        </Field>
+        <Field Name="SIH_LRDate">
+          <DataField>SIH_LRDate</DataField>
+        </Field>
+        <Field Name="SIH_VehNo">
+          <DataField>SIH_VehNo</DataField>
+        </Field>
+        <Field Name="SIH_Freight">
+          <DataField>SIH_Freight</DataField>
+        </Field>
+        <Field Name="SIH_InvoiceTime">
+          <DataField>SIH_InvoiceTime</DataField>
+        </Field>
+        <Field Name="SIH_Remark">
+          <DataField>SIH_Remark</DataField>
+        </Field>
+        <Field Name="SIH_Remark2">
+          <DataField>SIH_Remark2</DataField>
+        </Field>
+        <Field Name="SIH_Payment">
+          <DataField>SIH_Payment</DataField>
+        </Field>
+        <Field Name="SIH_Transport">
+          <DataField>SIH_Transport</DataField>
+        </Field>
+        <Field Name="SIH_FullName">
+          <DataField>SIH_FullName</DataField>
+        </Field>
+        <Field Name="SIH_BillAdd1">
+          <DataField>SIH_BillAdd1</DataField>
+        </Field>
+        <Field Name="SIH_BillAdd2">
+          <DataField>SIH_BillAdd2</DataField>
+        </Field>
+        <Field Name="SIH_BillAdd3">
+          <DataField>SIH_BillAdd3</DataField>
+        </Field>
+        <Field Name="Ship2Name">
+          <DataField>Ship2Name</DataField>
+        </Field>
+        <Field Name="SIH_ShipName">
+          <DataField>SIH_ShipName</DataField>
+        </Field>
+        <Field Name="SIH_ShipAdd1">
+          <DataField>SIH_ShipAdd1</DataField>
+        </Field>
+        <Field Name="SIH_ShipAdd2">
+          <DataField>SIH_ShipAdd2</DataField>
+        </Field>
+        <Field Name="SIH_ShipAdd3">
+          <DataField>SIH_ShipAdd3</DataField>
+        </Field>
+        <Field Name="CustLBTNo">
+          <DataField>CustLBTNo</DataField>
+        </Field>
+        <Field Name="CustRespone">
+          <DataField>CustRespone</DataField>
+        </Field>
+        <Field Name="CustECCNo">
+          <DataField>CustECCNo</DataField>
+        </Field>
+        <Field Name="CustCSTNo">
+          <DataField>CustCSTNo</DataField>
+        </Field>
+        <Field Name="CustTINNo">
+          <DataField>CustTINNo</DataField>
+        </Field>
+        <Field Name="CustPANNo">
+          <DataField>CustPANNo</DataField>
+        </Field>
+        <Field Name="CustLSTNo">
+          <DataField>CustLSTNo</DataField>
+        </Field>
+        <Field Name="CustKms">
+          <DataField>CustKms</DataField>
+        </Field>
+        <Field Name="CustKmsFormat">
+          <DataField>CustKmsFormat</DataField>
+        </Field>
+        <Field Name="LocAdd1">
+          <DataField>LocAdd1</DataField>
+        </Field>
+        <Field Name="LocAdd2">
+          <DataField>LocAdd2</DataField>
+        </Field>
+        <Field Name="LocAdd3">
+          <DataField>LocAdd3</DataField>
+        </Field>
+        <Field Name="LocState">
+          <DataField>LocState</DataField>
+        </Field>
+        <Field Name="LocPhoneNo">
+          <DataField>LocPhoneNo</DataField>
+        </Field>
+        <Field Name="LocEmail">
+          <DataField>LocEmail</DataField>
+        </Field>
+        <Field Name="LocTINNo">
+          <DataField>LocTINNo</DataField>
+        </Field>
+        <Field Name="LocCSTNo">
+          <DataField>LocCSTNo</DataField>
+        </Field>
+        <Field Name="CompWeb">
+          <DataField>CompWeb</DataField>
+        </Field>
+        <Field Name="CompCINNo">
+          <DataField>CompCINNo</DataField>
+        </Field>
+        <Field Name="ComPANNo">
+          <DataField>ComPANNo</DataField>
+        </Field>
+        <Field Name="ECCDesc">
+          <DataField>ECCDesc</DataField>
+        </Field>
+        <Field Name="ECCRange">
+          <DataField>ECCRange</DataField>
+        </Field>
+        <Field Name="ECCDivision">
+          <DataField>ECCDivision</DataField>
+        </Field>
+        <Field Name="ECCComm">
+          <DataField>ECCComm</DataField>
+        </Field>
+        <Field Name="ECCAdd1">
+          <DataField>ECCAdd1</DataField>
+        </Field>
+        <Field Name="ECCAdd2">
+          <DataField>ECCAdd2</DataField>
+        </Field>
+        <Field Name="ECCAdd3">
+          <DataField>ECCAdd3</DataField>
+        </Field>
+        <Field Name="CompanyPANNo">
+          <DataField>CompanyPANNo</DataField>
+        </Field>
+        <Field Name="InvNo">
+          <DataField>InvNo</DataField>
+        </Field>
+        <Field Name="ShipToCST">
+          <DataField>ShipToCST</DataField>
+        </Field>
+        <Field Name="ShiptoTIN">
+          <DataField>ShiptoTIN</DataField>
+        </Field>
+        <Field Name="ShiptoLST">
+          <DataField>ShiptoLST</DataField>
+        </Field>
+        <Field Name="ShipECCNo">
+          <DataField>ShipECCNo</DataField>
+        </Field>
+        <Field Name="AddlDutyAmount">
+          <DataField>AddlDutyAmount</DataField>
+        </Field>
+        <Field Name="AddlDutyAmountFormat">
+          <DataField>AddlDutyAmountFormat</DataField>
+        </Field>
+        <Field Name="Freight">
+          <DataField>Freight</DataField>
+        </Field>
+        <Field Name="FreightFormat">
+          <DataField>FreightFormat</DataField>
+        </Field>
+        <Field Name="EntryTax">
+          <DataField>EntryTax</DataField>
+        </Field>
+        <Field Name="EntryTaxFormat">
+          <DataField>EntryTaxFormat</DataField>
+        </Field>
+        <Field Name="DiscountCharge">
+          <DataField>DiscountCharge</DataField>
+        </Field>
+        <Field Name="DiscountChargeFormat">
+          <DataField>DiscountChargeFormat</DataField>
+        </Field>
+        <Field Name="TaxDescription">
+          <DataField>TaxDescription</DataField>
+        </Field>
+        <Field Name="BedPer">
+          <DataField>BedPer</DataField>
+        </Field>
+        <Field Name="BedPerFormat">
+          <DataField>BedPerFormat</DataField>
+        </Field>
+        <Field Name="eCessPer">
+          <DataField>eCessPer</DataField>
+        </Field>
+        <Field Name="eCessPerFormat">
+          <DataField>eCessPerFormat</DataField>
+        </Field>
+        <Field Name="SheCessPer">
+          <DataField>SheCessPer</DataField>
+        </Field>
+        <Field Name="SheCessPerFormat">
+          <DataField>SheCessPerFormat</DataField>
+        </Field>
+        <Field Name="DutyAmtperunit">
+          <DataField>DutyAmtperunit</DataField>
+        </Field>
+        <Field Name="DutyAmtperunitFormat">
+          <DataField>DutyAmtperunitFormat</DataField>
+        </Field>
+        <Field Name="CompanyInsNo">
+          <DataField>CompanyInsNo</DataField>
+        </Field>
+        <Field Name="CompanyInsProv">
+          <DataField>CompanyInsProv</DataField>
+        </Field>
+        <Field Name="CompanyInsExp">
+          <DataField>CompanyInsExp</DataField>
+        </Field>
+        <Field Name="CurrCode">
+          <DataField>CurrCode</DataField>
+        </Field>
+        <Field Name="ItmQtyPer1">
+          <DataField>ItmQtyPer1</DataField>
+        </Field>
+        <Field Name="ItmQtyPer1Format">
+          <DataField>ItmQtyPer1Format</DataField>
+        </Field>
+        <Field Name="ItmQty1">
+          <DataField>ItmQty1</DataField>
+        </Field>
+        <Field Name="ItmQty1Format">
+          <DataField>ItmQty1Format</DataField>
+        </Field>
+        <Field Name="ItmSheAmt1">
+          <DataField>ItmSheAmt1</DataField>
+        </Field>
+        <Field Name="ItmSheAmt1Format">
+          <DataField>ItmSheAmt1Format</DataField>
+        </Field>
+        <Field Name="ItmeCessAmt1">
+          <DataField>ItmeCessAmt1</DataField>
+        </Field>
+        <Field Name="ItmeCessAmt1Format">
+          <DataField>ItmeCessAmt1Format</DataField>
+        </Field>
+        <Field Name="ItmExciseAmt1">
+          <DataField>ItmExciseAmt1</DataField>
+        </Field>
+        <Field Name="ItmExciseAmt1Format">
+          <DataField>ItmExciseAmt1Format</DataField>
+        </Field>
+        <Field Name="ItmQtyBase1">
+          <DataField>ItmQtyBase1</DataField>
+        </Field>
+        <Field Name="ItmQtyBase1Format">
+          <DataField>ItmQtyBase1Format</DataField>
+        </Field>
+        <Field Name="ItmFinalAmt">
+          <DataField>ItmFinalAmt</DataField>
+        </Field>
+        <Field Name="ItmFinalAmtFormat">
+          <DataField>ItmFinalAmtFormat</DataField>
+        </Field>
+        <Field Name="ItmLineAmt1">
+          <DataField>ItmLineAmt1</DataField>
+        </Field>
+        <Field Name="ItmLineAmt1Format">
+          <DataField>ItmLineAmt1Format</DataField>
+        </Field>
+        <Field Name="ItmLineDiscAmt1">
+          <DataField>ItmLineDiscAmt1</DataField>
+        </Field>
+        <Field Name="ItmLineDiscAmt1Format">
+          <DataField>ItmLineDiscAmt1Format</DataField>
+        </Field>
+        <Field Name="TPTSUBSIDYtext">
+          <DataField>TPTSUBSIDYtext</DataField>
+        </Field>
+        <Field Name="TPTSUBSIDY">
+          <DataField>TPTSUBSIDY</DataField>
+        </Field>
+        <Field Name="TPTSUBSIDYFormat">
+          <DataField>TPTSUBSIDYFormat</DataField>
+        </Field>
+        <Field Name="CashDiscText">
+          <DataField>CashDiscText</DataField>
+        </Field>
+        <Field Name="CashDiscountAmt">
+          <DataField>CashDiscountAmt</DataField>
+        </Field>
+        <Field Name="CashDiscountAmtFormat">
+          <DataField>CashDiscountAmtFormat</DataField>
+        </Field>
+        <Field Name="CCFCtext">
+          <DataField>CCFCtext</DataField>
+        </Field>
+        <Field Name="CCFC">
+          <DataField>CCFC</DataField>
+        </Field>
+        <Field Name="CCFCFormat">
+          <DataField>CCFCFormat</DataField>
+        </Field>
+        <Field Name="BranchOfficeAddress">
+          <DataField>BranchOfficeAddress</DataField>
+        </Field>
+        <Field Name="BranchOffText">
+          <DataField>BranchOffText</DataField>
+        </Field>
+        <Field Name="AddlTaxCessDesc">
+          <DataField>AddlTaxCessDesc</DataField>
+        </Field>
+        <Field Name="AddlTaxCess">
+          <DataField>AddlTaxCess</DataField>
+        </Field>
+        <Field Name="AddlTaxCessFormat">
+          <DataField>AddlTaxCessFormat</DataField>
+        </Field>
+        <Field Name="TransportSubsidy">
+          <DataField>TransportSubsidy</DataField>
+        </Field>
+        <Field Name="TransportSubsidyFormat">
+          <DataField>TransportSubsidyFormat</DataField>
+        </Field>
+        <Field Name="CessText">
+          <DataField>CessText</DataField>
+        </Field>
+        <Field Name="CessValue">
+          <DataField>CessValue</DataField>
+        </Field>
+        <Field Name="CessValueFormat">
+          <DataField>CessValueFormat</DataField>
+        </Field>
+        <Field Name="EntryOctroi">
+          <DataField>EntryOctroi</DataField>
+        </Field>
+        <Field Name="EntryOctroiFormat">
+          <DataField>EntryOctroiFormat</DataField>
+        </Field>
+        <Field Name="ADDTAX">
+          <DataField>ADDTAX</DataField>
+        </Field>
+        <Field Name="ADDTAXFormat">
+          <DataField>ADDTAXFormat</DataField>
+        </Field>
+        <Field Name="ADDTAXText">
+          <DataField>ADDTAXText</DataField>
+        </Field>
+        <Field Name="CCFCLineamt">
+          <DataField>CCFCLineamt</DataField>
+        </Field>
+        <Field Name="CCFCLineamtFormat">
+          <DataField>CCFCLineamtFormat</DataField>
+        </Field>
+        <Field Name="TaxAmount">
+          <DataField>TaxAmount</DataField>
+        </Field>
+        <Field Name="TaxAmountFormat">
+          <DataField>TaxAmountFormat</DataField>
+        </Field>
+        <Field Name="InvType">
+          <DataField>InvType</DataField>
+        </Field>
+        <Field Name="InvType1">
+          <DataField>InvType1</DataField>
+        </Field>
+        <Field Name="number">
+          <DataField>number</DataField>
+        </Field>
+        <Field Name="outPutNo">
+          <DataField>outPutNo</DataField>
+        </Field>
+        <Field Name="TaxInvoice">
+          <DataField>TaxInvoice</DataField>
+        </Field>
+        <Field Name="LineNo">
+          <DataField>LineNo</DataField>
+        </Field>
+        <Field Name="ItmDocNo">
+          <DataField>ItmDocNo</DataField>
+        </Field>
+        <Field Name="ItmNo">
+          <DataField>ItmNo</DataField>
+        </Field>
+        <Field Name="ItmDesc1">
+          <DataField>ItmDesc1</DataField>
+        </Field>
+        <Field Name="ItmDesc">
+          <DataField>ItmDesc</DataField>
+        </Field>
+        <Field Name="ItmDesc3">
+          <DataField>ItmDesc3</DataField>
+        </Field>
+        <Field Name="ItmBaseUOM">
+          <DataField>ItmBaseUOM</DataField>
+        </Field>
+        <Field Name="ItmCrossRef">
+          <DataField>ItmCrossRef</DataField>
+        </Field>
+        <Field Name="BatchNo">
+          <DataField>BatchNo</DataField>
+        </Field>
+        <Field Name="MRPPrice">
+          <DataField>MRPPrice</DataField>
+        </Field>
+        <Field Name="MRPPriceFormat">
+          <DataField>MRPPriceFormat</DataField>
+        </Field>
+        <Field Name="AssValue">
+          <DataField>AssValue</DataField>
+        </Field>
+        <Field Name="AssValueFormat">
+          <DataField>AssValueFormat</DataField>
+        </Field>
+        <Field Name="ProdDisc">
+          <DataField>ProdDisc</DataField>
+        </Field>
+        <Field Name="ProdDiscFormat">
+          <DataField>ProdDiscFormat</DataField>
+        </Field>
+        <Field Name="billingprice">
+          <DataField>billingprice</DataField>
+        </Field>
+        <Field Name="billingpriceFormat">
+          <DataField>billingpriceFormat</DataField>
+        </Field>
+        <Field Name="PriceSupport">
+          <DataField>PriceSupport</DataField>
+        </Field>
+        <Field Name="PriceSupportFormat">
+          <DataField>PriceSupportFormat</DataField>
+        </Field>
+        <Field Name="ItmListPrice">
+          <DataField>ItmListPrice</DataField>
+        </Field>
+        <Field Name="ItmListPriceFormat">
+          <DataField>ItmListPriceFormat</DataField>
+        </Field>
+        <Field Name="chargeamttotal">
+          <DataField>chargeamttotal</DataField>
+        </Field>
+        <Field Name="chargeamttotalFormat">
+          <DataField>chargeamttotalFormat</DataField>
+        </Field>
+        <Field Name="ItmQtyPer">
+          <DataField>ItmQtyPer</DataField>
+        </Field>
+        <Field Name="ItmQtyPerFormat">
+          <DataField>ItmQtyPerFormat</DataField>
+        </Field>
+        <Field Name="ItmQty">
+          <DataField>ItmQty</DataField>
+        </Field>
+        <Field Name="ItmQtyFormat">
+          <DataField>ItmQtyFormat</DataField>
+        </Field>
+        <Field Name="ItmUnitPrice">
+          <DataField>ItmUnitPrice</DataField>
+        </Field>
+        <Field Name="ItmUnitPriceFormat">
+          <DataField>ItmUnitPriceFormat</DataField>
+        </Field>
+        <Field Name="ItmQtyBase">
+          <DataField>ItmQtyBase</DataField>
+        </Field>
+        <Field Name="ItmQtyBaseFormat">
+          <DataField>ItmQtyBaseFormat</DataField>
+        </Field>
+        <Field Name="ItmExcise">
+          <DataField>ItmExcise</DataField>
+        </Field>
+        <Field Name="ItmExciseRate">
+          <DataField>ItmExciseRate</DataField>
+        </Field>
+        <Field Name="ItmBEDAmt">
+          <DataField>ItmBEDAmt</DataField>
+        </Field>
+        <Field Name="ItmeCessAmt">
+          <DataField>ItmeCessAmt</DataField>
+        </Field>
+        <Field Name="ItmSHeAmt">
+          <DataField>ItmSHeAmt</DataField>
+        </Field>
+        <Field Name="ItmLineAmt">
+          <DataField>ItmLineAmt</DataField>
+        </Field>
+        <Field Name="ItmLineAmtFormat">
+          <DataField>ItmLineAmtFormat</DataField>
+        </Field>
+        <Field Name="ItmTaxAmt">
+          <DataField>ItmTaxAmt</DataField>
+        </Field>
+        <Field Name="ItmLineDiscAmt">
+          <DataField>ItmLineDiscAmt</DataField>
+        </Field>
+        <Field Name="ItmLineDiscAmtFormat">
+          <DataField>ItmLineDiscAmtFormat</DataField>
+        </Field>
+        <Field Name="ItmInvDiscAmt">
+          <DataField>ItmInvDiscAmt</DataField>
+        </Field>
+        <Field Name="ItmInvDiscAmtFormat">
+          <DataField>ItmInvDiscAmtFormat</DataField>
+        </Field>
+        <Field Name="RoundOffAmnt">
+          <DataField>RoundOffAmnt</DataField>
+        </Field>
+        <Field Name="RoundOffAmntFormat">
+          <DataField>RoundOffAmntFormat</DataField>
+        </Field>
+        <Field Name="AmtinWordExcise">
+          <DataField>AmtinWordExcise</DataField>
+        </Field>
+        <Field Name="AmtinWordeCess">
+          <DataField>AmtinWordeCess</DataField>
+        </Field>
+        <Field Name="AmtinWordShe">
+          <DataField>AmtinWordShe</DataField>
+        </Field>
+        <Field Name="AmtinWordTotal">
+          <DataField>AmtinWordTotal</DataField>
+        </Field>
+        <Field Name="ItmFinalAmt1">
+          <DataField>ItmFinalAmt1</DataField>
+        </Field>
+        <Field Name="TaxBaseAmt">
+          <DataField>TaxBaseAmt</DataField>
+        </Field>
+        <Field Name="TaxAmount_SalesInvoiceLine">
+          <DataField>TaxAmount_SalesInvoiceLine</DataField>
+        </Field>
+        <Field Name="TaxableAmt">
+          <DataField>TaxableAmt</DataField>
+        </Field>
+        <Field Name="NNN">
+          <DataField>NNN</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Logo21">
+          <DataField>Logo21</DataField>
+        </Field>
+        <Field Name="Cat21">
+          <DataField>Cat21</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="CompPicture">
+          <DataField>CompPicture</DataField>
+        </Field>
+        <Field Name="IpolLogo">
+          <DataField>IpolLogo</DataField>
+        </Field>
+        <Field Name="CompShadedBoxPicture">
+          <DataField>CompShadedBoxPicture</DataField>
+        </Field>
+        <Field Name="RepsolLogo">
+          <DataField>RepsolLogo</DataField>
+        </Field>
+        <Field Name="Comp_GSTRegNo">
+          <DataField>Comp_GSTRegNo</DataField>
+        </Field>
+        <Field Name="CustName">
+          <DataField>CustName</DataField>
+        </Field>
+        <Field Name="InvNo">
+          <DataField>InvNo</DataField>
+        </Field>
+        <Field Name="InvDate">
+          <DataField>InvDate</DataField>
+        </Field>
+        <Field Name="LocAdd1">
+          <DataField>LocAdd1</DataField>
+        </Field>
+        <Field Name="LineNo">
+          <DataField>LineNo</DataField>
+        </Field>
+        <Field Name="ItmNo">
+          <DataField>ItmNo</DataField>
+        </Field>
+        <Field Name="LotNo">
+          <DataField>LotNo</DataField>
+        </Field>
+        <Field Name="TestDate">
+          <DataField>TestDate</DataField>
+        </Field>
+        <Field Name="PackDescription">
+          <DataField>PackDescription</DataField>
+        </Field>
+        <Field Name="ProductCode">
+          <DataField>ProductCode</DataField>
+        </Field>
+        <Field Name="vItemDesc">
+          <DataField>vItemDesc</DataField>
+        </Field>
+        <Field Name="CompWWW">
+          <DataField>CompWWW</DataField>
+        </Field>
+        <Field Name="ItemNo_QC">
+          <DataField>ItemNo_QC</DataField>
+        </Field>
+        <Field Name="LineNo_QC">
+          <DataField>LineNo_QC</DataField>
+        </Field>
+        <Field Name="CompCINNo">
+          <DataField>CompCINNo</DataField>
+        </Field>
+        <Field Name="CompPANNo">
+          <DataField>CompPANNo</DataField>
+        </Field>
+        <Field Name="BatchNo">
+          <DataField>BatchNo</DataField>
+        </Field>
+        <Field Name="BatchDate">
+          <DataField>BatchDate</DataField>
+        </Field>
+        <Field Name="Grade">
+          <DataField>Grade</DataField>
+        </Field>
+        <Field Name="Ctr">
+          <DataField>Ctr</DataField>
+        </Field>
+        <Field Name="SNo">
+          <DataField>SNo</DataField>
+        </Field>
+        <Field Name="Parameter">
+          <DataField>Parameter</DataField>
+        </Field>
+        <Field Name="TestingMethod">
+          <DataField>TestingMethod</DataField>
+        </Field>
+        <Field Name="TypicalValue">
+          <DataField>TypicalValue</DataField>
+        </Field>
+        <Field Name="MinV">
+          <DataField>MinV</DataField>
+        </Field>
+        <Field Name="MaxV">
+          <DataField>MaxV</DataField>
+        </Field>
+        <Field Name="Result">
+          <DataField>Result</DataField>
+        </Field>
+        <Field Name="Remark1">
+          <DataField>Remark1</DataField>
+        </Field>
+        <Field Name="Remark">
+          <DataField>Remark</DataField>
+        </Field>
+        <Field Name="ApprovedBy">
+          <DataField>ApprovedBy</DataField>
+        </Field>
+        <Field Name="LocAdd">
+          <DataField>LocAdd</DataField>
+        </Field>
+        <Field Name="NAH">
+          <DataField>NAH</DataField>
+        </Field>
+        <Field Name="MfgDate">
+          <DataField>MfgDate</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

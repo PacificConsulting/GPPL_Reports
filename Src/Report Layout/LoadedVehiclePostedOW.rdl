@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="HeaderDate">
+          <DataField>HeaderDate</DataField>
+        </Field>
+        <Field Name="GateEntryNo">
+          <DataField>GateEntryNo</DataField>
+        </Field>
+        <Field Name="DocDate">
+          <DataField>DocDate</DataField>
+        </Field>
+        <Field Name="LocName">
+          <DataField>LocName</DataField>
+        </Field>
+        <Field Name="TransporterName">
+          <DataField>TransporterName</DataField>
+        </Field>
+        <Field Name="VehicleNo">
+          <DataField>VehicleNo</DataField>
+        </Field>
+        <Field Name="DriverName">
+          <DataField>DriverName</DataField>
+        </Field>
+        <Field Name="DriverMobNo">
+          <DataField>DriverMobNo</DataField>
+        </Field>
+        <Field Name="LRNo">
+          <DataField>LRNo</DataField>
+        </Field>
+        <Field Name="LRDate">
+          <DataField>LRDate</DataField>
+        </Field>
+        <Field Name="VehicleCapacity">
+          <DataField>VehicleCapacity</DataField>
+        </Field>
+        <Field Name="Purchlineqty">
+          <DataField>Purchlineqty</DataField>
+        </Field>
+        <Field Name="PurchlineqtyFormat">
+          <DataField>PurchlineqtyFormat</DataField>
+        </Field>
+        <Field Name="Utilized">
+          <DataField>Utilized</DataField>
+        </Field>
+        <Field Name="VehicleHeight">
+          <DataField>VehicleHeight</DataField>
+        </Field>
+        <Field Name="CreatedDate">
+          <DataField>CreatedDate</DataField>
+        </Field>
+        <Field Name="CreatedTime">
+          <DataField>CreatedTime</DataField>
+        </Field>
+        <Field Name="ReleaseDate">
+          <DataField>ReleaseDate</DataField>
+        </Field>
+        <Field Name="ReleaseTime">
+          <DataField>ReleaseTime</DataField>
+        </Field>
+        <Field Name="UnloadingDate">
+          <DataField>UnloadingDate</DataField>
+        </Field>
+        <Field Name="UnloadingTime">
+          <DataField>UnloadingTime</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+        <Field Name="PostingTime">
+          <DataField>PostingTime</DataField>
+        </Field>
+        <Field Name="CreatedUser">
+          <DataField>CreatedUser</DataField>
+        </Field>
+        <Field Name="ReleasedUser">
+          <DataField>ReleasedUser</DataField>
+        </Field>
+        <Field Name="Vehicletakenuser">
+          <DataField>Vehicletakenuser</DataField>
+        </Field>
+        <Field Name="Postuser">
+          <DataField>Postuser</DataField>
+        </Field>
+        <Field Name="TShipPostingDate">
+          <DataField>TShipPostingDate</DataField>
+        </Field>
+        <Field Name="TShipName">
+          <DataField>TShipName</DataField>
+        </Field>
+        <Field Name="TShipDocNo">
+          <DataField>TShipDocNo</DataField>
+        </Field>
+        <Field Name="TQtyBase">
+          <DataField>TQtyBase</DataField>
+        </Field>
+        <Field Name="TQtyBaseFormat">
+          <DataField>TQtyBaseFormat</DataField>
+        </Field>
+        <Field Name="SShipName">
+          <DataField>SShipName</DataField>
+        </Field>
+        <Field Name="SShipPostingDate">
+          <DataField>SShipPostingDate</DataField>
+        </Field>
+        <Field Name="SShipNo">
+          <DataField>SShipNo</DataField>
+        </Field>
+        <Field Name="ShipBaseQty">
+          <DataField>ShipBaseQty</DataField>
+        </Field>
+        <Field Name="ShipBaseQtyFormat">
+          <DataField>ShipBaseQtyFormat</DataField>
+        </Field>
+        <Field Name="SInvName">
+          <DataField>SInvName</DataField>
+        </Field>
+        <Field Name="SInvPostingDate">
+          <DataField>SInvPostingDate</DataField>
+        </Field>
+        <Field Name="SInvNo">
+          <DataField>SInvNo</DataField>
+        </Field>
+        <Field Name="SInvBaseQty">
+          <DataField>SInvBaseQty</DataField>
+        </Field>
+        <Field Name="SInvBaseQtyFormat">
+          <DataField>SInvBaseQtyFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
