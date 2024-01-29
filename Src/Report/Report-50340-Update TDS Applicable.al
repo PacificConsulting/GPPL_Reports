@@ -1,6 +1,6 @@
 report 50340 "Update TDS Applicable"
 {
-    // //robotdsDJ : Batch Report to Update TDS Applicable from 1st April to today for Purchase and Purchase Invoice Lines and Purchase Credit Memo Lines
+    //// //robotdsDJ : Batch Report to Update TDS Applicable from 1st April to today for Purchase and Purchase Invoice Lines and Purchase Credit Memo Lines
 
     Permissions = TableData 123 = rm,
                   TableData 125 = rm;
